@@ -4,6 +4,14 @@ require 'rack'
 require 'rack/lobster'
 require "cgi"
 
+def validaAcceso (usuario,clave)
+  foo = false
+  if "myUser"==usuario  && "12345"==clave
+     foo =true
+  end
+  return foo
+end
+
 server = TCPServer.new 5678
 
 while session = server.accept
@@ -20,7 +28,7 @@ while session = server.accept
       query = CGI::parse(query)
       usuario = query['usuario']
       clave = query['clave']
-      if "myUser"==usuario.first  && "12345"==clave.first
+      if validaAcceso(usuario.first,clave.first) 
         doc = File.open("acceso.html")
         longitud = doc.size
         headers = {'Content-Type' => 'text/html', 'Content-Length' => longitud}

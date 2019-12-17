@@ -2,16 +2,57 @@
 <html>
 <head>
 	<link rel="stylesheet" href="./bootstrap.min.css">
-	<title>Login</title>
+	<title>Formulario de registro</title>
 </head>
 <body>
 	<div class="container">
 		<div class="center-block d-flex justify-content-center">
-			<div class="badge badge-primary text-wrap justify-content-center" style="width: 6rem;margin-top: 20%">
+			<div class="badge badge-primary text-wrap justify-content-center" style="width: 6rem;margin-top: 10%">
 			  Bienvenido.
 			</div>
 		</div>
-	  	
+		<div class="row justify-content-md-center" style="margin-top: 1em;">
+		    <div class="col col-lg-3" style="background: #f3f3f3;padding: 0.1em;">
+		      	<div class="p-2" style="text-align: center;background:#fff;color: darkcyan;">
+		      		Registro para nuevo usuario
+		  		</div>	
+		  		<div class="p-2" style="text-align: center;font-weight: bolder;">
+		      		<form action="/registro" method="GET">		      	
+			      	  <div class="form-group row">
+					    <label for="usuario" class="col-sm-3 col-form-label col-form-label-sm">Usuario</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control form-control-sm" id="usuario" name="usuario" placeholder="Usuario" required="true">
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    <label for="clave" class="col-sm-3 col-form-label col-form-label-sm">Clave</label>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control form-control-sm" id="clave" name="clave" placeholder="Clave" required="true">
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    <label for="nombre" class="col-sm-3 col-form-label col-form-label-sm">Nombre</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" placeholder="Nombre" required="true">
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    <label for="apellido" class="col-sm-3 col-form-label col-form-label-sm">Apellido</label>
+					    <div class="col-sm-9">
+					      <input type="apellido" class="form-control form-control-sm" id="apellido" name="apellido" placeholder="Apellido" required="true">
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    
+					    <div class="col-sm-12">
+					      <input type="submit" class="form-control form-control-sm" id="enviar" value="Enviar" style="background:#007bff;font-weight: bolder;color: #f3f3f3;">
+					    </div>
+					  </div>
+			      </form>	
+		  		</div>	
+			      
+		    </div>
+		</div>
 	</div>
 </body>
 </html>

@@ -8,9 +8,12 @@
 	<div class="container">
 		<div class="center-block d-flex justify-content-center">
 			<form class="form-group" style="margin-left: 30%;margin-right: 30%;margin-top: 20%" method="GET">
-				<label for="usuario" style="color: darkcyan;">Ingresar usuario y clave.</label>
-				<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Usuario">
-				<input type="password" name="clave" id="clave" class="form-control" placeholder="clave actual">
+				
+				<div class="p-2" style="text-align: center;background:#fff;color: darkcyan;">
+		      		<label for="usuario" style="color: darkcyan;">Ingresar usuario y clave.</label>
+		  		</div>	
+				<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Usuario" required="true">
+				<input type="password" name="clave" id="clave" class="form-control" placeholder="clave actual" required="true">
 				<input type="submit" name="enviar" id="enviar" class="btn btn-primary col-md-12" style="margin-top: .4em;" />
 			</form>	
 		</div>
